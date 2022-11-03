@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <title>Destiny</title>
+  <link href="mystyle.css" rel="stylesheet" type="text/css">
+  <script>
+    function stringGen() {
+	  var text = "";
+	  var len = document.getElementById("num").value;
+	  var char_list =
+		"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+	  for (var i = 0; i < len; i++) {
+		text += char_list.charAt(Math.floor(Math.random() * char_list.length));
+	  }
+	  document.getElementById("result").innerHTML = text;
+	  return text;
+	}
+
+  </script>
+</head>
+<body>
+  Enter the length of character:
+  <input type='text' id="num">
+  <button onclick="stringGen()">submit</button>
+  <p id="result"></p>
+</body>
+</html>
